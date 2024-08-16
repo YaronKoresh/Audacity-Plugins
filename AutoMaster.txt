@@ -1,20 +1,5 @@
 SelectAll:
 MixAndRender:
-Normalize:ApplyGain="1" PeakLevel="-12" RemoveDcOffset="1" StereoIndependent="1"
-Master:Amount="100.0" Preset="15"
-Wahwah:Depth="0" Freq="4" Gain="0" Offset="7" Phase="0" Resonance="0.1"
-Normalize:ApplyGain="1" PeakLevel="-12" RemoveDcOffset="1" StereoIndependent="1"
-Master:Amount="100.0" Preset="15"
-FilterCurve:f0="20.35202" f1="14965.442" f2="17711.395" f3="19963.076" FilterLength="8191" InterpolateLin="1" InterpolationMethod="B-spline" v0="-35.621773" v1="18.309456" v2="18.309456" v3="-30"
-Normalize:ApplyGain="1" PeakLevel="-12" RemoveDcOffset="1" StereoIndependent="1"
-Master:Amount="100.0" Preset="15"
-FilterCurve:f0="20" f1="988.54296" f2="1977.0859" f3="4960.5487" f4="9967.8082" f5="19990.535" f6="22050" FilterLength="8191" InterpolateLin="1" InterpolationMethod="B-spline" v0="-59.656158" v1="-11.793701" v2="0.17192078" v3="0.15472412" v4="-11.381088" v5="-95.699142" v6="-117"
-De-Ess:Amount="100.0" Preset="3"
-De-Ess:Amount="100.0" Preset="1"
-Select:End="0.075" RelativeTo="ProjectStart"
-Silence:Use_Preset="<Factory Defaults>"
-Select:End="0.025" RelativeTo="ProjectEnd"
-Silence:Use_Preset="<Factory Defaults>"
-SelectAll:
-LoudnessNormalization:DualMono="1" LUFSLevel="-23" NormalizeTo="1" RMSLevel="-10" StereoIndependent="1"
-Limiter:kneeWidthDb="10" lookaheadMs="50" makeupTargetDb="-1.5" releaseMs="1000" showActual="1" showInput="0" showOutput="1" showTarget="0" thresholdDb="0"
+Wahwah:Depth="0" Freq="3.1" Gain="0" Offset="0" Phase="0" Resonance="1"
+FilterCurve:f0="29.615866" f1="58.997947" f10="17491.719" f11="19990.535" f2="141.16058" f3="296.31832" f4="996.3155" f5="1977.0859" f6="3954.1719" f7="8430.0747" f8="13427.709" f9="16420.797" FilterLength="8191" InterpolateLin="1" InterpolationMethod="B-spline" v0="-118.46991" v1="-73.289398" v10="-30.234955" v11="-118.46991" v2="-64.813759" v3="-53.097424" v4="-25.17765" v5="-11.363899" v6="0.36676025" v7="5.4670486" v8="5.4670486" v9="-11.873924"
+LoudnessNormalization:DualMono="1" LUFSLevel="-23" NormalizeTo="1" RMSLevel="-6" StereoIndependent="1"
