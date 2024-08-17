@@ -1,18 +1,17 @@
 SelectAll:
 MixAndRender:
-Wahwah:Depth="0" Freq="4" Gain="0" Offset="25" Phase="0" Resonance="0.1"
+
 Wahwah:Depth="0" Freq="4" Gain="0" Offset="45" Phase="0" Resonance="0.1"
-BassAndTreble:Bass="-24" Gain="0" Link_Sliders="0" Treble="0"
-BassAndTreble:Bass="-12" Gain="0" Link_Sliders="0" Treble="0"
-SimpleEQ:Preset-"9" Amount="100"
-SimpleEQ:Preset-"1" Amount="100"
-ProEQ:Preset-"10" Amount="100"
-BassAndTreble:Bass="0" Gain="0" Link_Sliders="0" Treble="6"
-SimpleEQ:Preset-"9" Amount="100"
-SimpleEQ:Preset-"1" Amount="100"
-ProEQ:Preset-"10" Amount="100"
-BassAndTreble:Bass="-30" Gain="0" Link_Sliders="0" Treble="0"
-Master:Preset-"17" Amount="100"
-De-Ess:Preset-"3" Amount="100"
+
+ProEQ:Preset-"2" Amount="100"
+Master:Preset-"15" Amount="100"
+
 LoudnessNormalization:DualMono="1" LUFSLevel="-23" NormalizeTo="1" RMSLevel="-10" StereoIndependent="1"
+Limiter:kneeWidthDb="10" lookaheadMs="50" makeupTargetDb="-1.5" releaseMs="1000" showActual="1" showInput="0" showOutput="1" showTarget="0" thresholdDb="0"
+
+SimpleEQ:Preset-"5" Amount="100"
+Master:Preset-"16" Amount="100"
+
+De-Ess:Preset-"3" Amount="100"
+
 Limiter:kneeWidthDb="10" lookaheadMs="50" makeupTargetDb="-1.5" releaseMs="1000" showActual="1" showInput="0" showOutput="1" showTarget="0" thresholdDb="0"
