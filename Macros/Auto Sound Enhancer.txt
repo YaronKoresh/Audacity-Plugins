@@ -1,0 +1,39 @@
+SelTrackStartToEnd:
+Wahwah:Depth="0" Freq="4" Gain="0" Offset="33" Phase="0" Resonance="0.1"
+Wahwah:Depth="0" Freq="4" Gain="0" Offset="95" Phase="0" Resonance="2"
+BassAndTreble:Bass="-30" Gain="0" Link_Sliders="0" Treble="24"
+Wahwah:Depth="0" Freq="4" Gain="0" Offset="95" Phase="0" Resonance="2"
+Copy:
+Wahwah:Depth="0" Freq="4" Gain="0" Offset="20" Phase="0" Resonance="2"
+LoudnessNormalization:DualMono="1" LUFSLevel="-3" NormalizeTo="1" RMSLevel="0" StereoIndependent="0"
+PanLeft:
+SelectNone:
+Paste:
+Wahwah:Depth="0" Freq="4" Gain="0" Offset="40" Phase="0" Resonance="2"
+LoudnessNormalization:DualMono="1" LUFSLevel="-9" NormalizeTo="1" RMSLevel="0" StereoIndependent="0"
+Invert:Use_Preset="<Factory Defaults>"
+PanLeft:
+SelectNone:
+Paste:
+Wahwah:Depth="0" Freq="4" Gain="0" Offset="80" Phase="0" Resonance="2"
+LoudnessNormalization:DualMono="1" LUFSLevel="-6" NormalizeTo="1" RMSLevel="0" StereoIndependent="0"
+PanLeft:
+SelectNone:
+Paste:
+Wahwah:Depth="0" Freq="4" Gain="0" Offset="30" Phase="0" Resonance="2"
+LoudnessNormalization:DualMono="1" LUFSLevel="-6" NormalizeTo="1" RMSLevel="0" StereoIndependent="0"
+PanRight:
+SelectNone:
+Paste:
+Wahwah:Depth="0" Freq="4" Gain="0" Offset="60" Phase="0" Resonance="2"
+LoudnessNormalization:DualMono="1" LUFSLevel="-12" NormalizeTo="1" RMSLevel="0" StereoIndependent="0"
+Invert:Use_Preset="<Factory Defaults>"
+PanRight:
+SelectNone:
+Paste:
+Wahwah:Depth="0" Freq="4" Gain="0" Offset="90" Phase="0" Resonance="2"
+LoudnessNormalization:DualMono="1" LUFSLevel="0" NormalizeTo="1" RMSLevel="0" StereoIndependent="0"
+PanRight:
+SelectAll:
+MixAndRender:
+AutoSoundEnhancer:Use_Preset="<Factory Defaults>"

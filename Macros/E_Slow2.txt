@@ -1,0 +1,2 @@
+SelTrackStartToEnd:
+ChangeSpeedAndPitch:Percentage="-15.910"
