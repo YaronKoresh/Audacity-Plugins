@@ -28,7 +28,7 @@ $debugbutton false
 
 ;; ##############################################################################
 
-(defun limit (sig &optional (limit -0.1) (hold 0.1))
+(defun limit (sig &optional (limit -0.1) (hold 1.0))
   (defun get-env (sig step lookahead limit)
     (let* ((sig (mult (/ limit) sig))
            (pad-time (* 3 lookahead))
@@ -99,8 +99,8 @@ $debugbutton false
     (scale lim2 (sum (s-exp bottom) -1))
   ))
   (limit
-    (auto-scale sig 2)
-  -0.1)
+    (auto-scale sig 10)
+  )
 )
 
 ;; ##############################################################################
