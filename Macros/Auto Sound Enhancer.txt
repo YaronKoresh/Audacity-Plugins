@@ -1,5 +1,9 @@
+CursTrackEnd:
+CursorShortJumpLeft:
+SelCursorToTrackEnd:
+Silence:
 SelTrackStartToEnd:
-Wahwah:Depth="0" Freq="0.1" Gain="0" Offset="33" Phase="0" Resonance="0.1"
+Wahwah:Depth="0" Freq="4" Gain="0" Offset="33" Phase="0" Resonance="0.1"
 Wahwah:Depth="0" Freq="4" Gain="0" Offset="33" Phase="0" Resonance="0.1"
 FilterCurve:f0="20" f1="50" f2="500" f3="9000" f4="22050" FilterLength="8191" InterpolateLin="0" InterpolationMethod="B-spline" v0="-100" v1="-80" v2="-40" v3="30" v4="-100"
 AutoSoundEnhancer:
