@@ -1,36 +1,5 @@
 SelTrackStartToEnd:
-Wahwah:Depth="0" Freq="4" Gain="0" Offset="99" Phase="0" Resonance="0.1"
-Copy:
-Wahwah:Depth="0" Freq="4" Gain="0" Offset="20" Phase="0" Resonance="10"
-LoudnessNormalization:DualMono="1" LUFSLevel="-3" NormalizeTo="1" RMSLevel="-6" StereoIndependent="0"
-PanLeft:
-SelectNone:
-Paste:
-Wahwah:Depth="0" Freq="4" Gain="0" Offset="40" Phase="0" Resonance="10"
-LoudnessNormalization:DualMono="1" LUFSLevel="-9" NormalizeTo="1" RMSLevel="-9" StereoIndependent="0"
-Invert:Use_Preset="<Factory Defaults>"
-PanLeft:
-SelectNone:
-Paste:
-Wahwah:Depth="0" Freq="4" Gain="0" Offset="80" Phase="0" Resonance="10"
-LoudnessNormalization:DualMono="1" LUFSLevel="-6" NormalizeTo="1" RMSLevel="-3" StereoIndependent="0"
-PanLeft:
-SelectNone:
-Paste:
-Wahwah:Depth="0" Freq="4" Gain="0" Offset="30" Phase="0" Resonance="10"
-LoudnessNormalization:DualMono="1" LUFSLevel="-6" NormalizeTo="1" RMSLevel="-6" StereoIndependent="0"
-PanRight:
-SelectNone:
-Paste:
-Wahwah:Depth="0" Freq="4" Gain="0" Offset="60" Phase="0" Resonance="10"
-LoudnessNormalization:DualMono="1" LUFSLevel="-12" NormalizeTo="1" RMSLevel="-3" StereoIndependent="0"
-Invert:Use_Preset="<Factory Defaults>"
-PanRight:
-SelectNone:
-Paste:
-Wahwah:Depth="0" Freq="4" Gain="0" Offset="90" Phase="0" Resonance="10"
-LoudnessNormalization:DualMono="1" LUFSLevel="0" NormalizeTo="1" RMSLevel="-9" StereoIndependent="0"
-PanRight:
-SelectAll:
-MixAndRender:
-AutoSoundEnhancer:Use_Preset="<Factory Defaults>"
+Wahwah:Depth="0" Freq="0.1" Gain="0" Offset="33" Phase="0" Resonance="0.1"
+Wahwah:Depth="0" Freq="4" Gain="0" Offset="33" Phase="0" Resonance="0.1"
+FilterCurve:f0="20" f1="50" f2="500" f3="9000" f4="22050" FilterLength="8191" InterpolateLin="0" InterpolationMethod="B-spline" v0="-100" v1="-80" v2="-40" v3="30" v4="-100"
+AutoSoundEnhancer:
