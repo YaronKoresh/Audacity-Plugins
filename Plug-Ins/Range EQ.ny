@@ -41,32 +41,40 @@
 
 (defun apply-ultimate-eq (sig f-start f-end max-g peak-pct c-left c-right)
   (let* (
-         (bands 20)
-         (processed-sig sig)
-         
          (log-start (log f-start))
          (log-end (log f-end))
          
+         ;; חישוב מספר האוקטבות בטווח
          (total-octaves (/ (- log-end log-start) (log 2.0)))
-         (safe-octaves (max total-octaves 0.1))
+         (safe-octaves (max (abs total-octaves) 0.1))
          
-         ;; חישוב רוחב כל פרוסה באוקטבות
+         ;; --- חישוב דינמי של כמות הבאנדים ---
+         (bands-per-octave 4.0)
+         (calc-bands (truncate (+ 0.5 (* safe-octaves bands-per-octave))))
+         
+         ;; הגבלות מינימום
+         (bands (max 3 calc-bands))
+
+         (processed-sig sig)
+         
+         ;; חישוב רוחב כל פרוסה לפי כמות הבאנדים
          (slice-width (/ safe-octaves bands))
          
-         ;; פקטור להקטנת חפיפות בין הפילטרים וחידוד הדיוק
-         (final-width (* slice-width 0.8))
+         ;; פקטור למניעת בורות בין התדרים
+         (final-width (* slice-width 1.65))
 
          (bias-factor (/ peak-pct 100.0))
          (log-center (+ log-start (* bias-factor (- log-end log-start))))
          (f-center (exp log-center))
         )
     
+    ;; לולאת פילטרים
     (dotimes (i bands)
       (let* (
              (current-f (get-frequency-at-step f-start f-end (- bands 1) i))
              (weight 0.0)
             )
-        ;; חישוב המשקל
+        ;; חישוב המשקל היחסי לכל תדר
         (cond
           ((< current-f f-center)
            (let* ((range-len (- log-center log-start))
@@ -79,14 +87,14 @@
                   (rel-pos (if (> range-len 0) (/ curr-pos range-len) 0)))
              (setf weight (get-shaped-weight rel-pos c-right))))
         )
-        
-        ;; הפעלת הפילטר
+       
+        ;; הפעלת הפילטר רק אם יש צורך
         (let ((gain-at-slice (* max-g weight)))
-           ;; כעת אנו מעבירים את final-width (אוקטבות) במקום Q
-           (if (and (> (abs gain-at-slice) 0.05)
+           (if (and (> (abs gain-at-slice) 0.01) ; סף רגישות
                     (< current-f (/ *sound-srate* 2.0)))
                (setf processed-sig (eq-band processed-sig current-f gain-at-slice final-width))))
       ))
+ 
     processed-sig))
 
 ;; --- הרצה ראשית ---
@@ -96,15 +104,12 @@
   (setf sr (snd-srate *track*)))
 
 (let ((nyquist-hz (/ sr 2.0)))
-  ;; סדר את ההתחלה והסוף
+  ;; סידור ההתחלה והסוף
   (setf real-start (min freq-start freq-end))
   (setf real-end (max freq-start freq-end))
   
-  ;; הגבלות בטיחות
+  ;; הגבלות בטיחות לתדרים
   (setf real-start (max 20.0 real-start))
-  
-  ;; --- הגבלה דינמית ---
-  ;; לעולם אל תיתן לפילטר להגיע לקצה העליון של התדרים. תמיד תשאיר מרווח ביטחון.
   (setf real-end (min (- nyquist-hz 100.0) real-end))
   
   (if (< (- real-end real-start) 10.0)
